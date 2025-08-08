@@ -30,14 +30,15 @@ public class Main {
         for (z = 10; z >= 1; z--) {
             System.out.print(z + " ");
         }
+        System.out.println();
 
         //Задача 3
         System.out.println("Задача 3");
 
         int country = 12_000_000;
-        int population = (country / 1000 * 17) - (country / 1000 * 8);
 
         for (int i1 = 1; i1 <= 10; i1++) {
+            int population = (country / 1000 * 17) - (country / 1000 * 8);
             country += population;
             System.out.println("Год " + i1 + " численность начеления составляет " + country);
         }
@@ -92,12 +93,8 @@ public class Main {
 
         int friday = 5;
 
-        for (int c = 1; c <= 31; c++) {
-
-            if ( c == friday || (c - friday) % 7 == 0) {
+        for (int c = friday; c <= 31; c += 7) {
                 System.out.println("Число " + c + " является пятницей, подготовте отчет.");
-            }
-
         }
 
         // Задача 8
@@ -107,11 +104,12 @@ public class Main {
         int maxYear = nowYear + 100;
         int minYear = nowYear - 200;
 
-        for (int v = 0; v <= 2125; v++) {
+        for (int v = 0; v <= maxYear; v += 79) {
 
-            if ( v % 79 == 0 && v > minYear && v < maxYear){
+            if (v >= minYear) {
                 System.out.println(v);
             }
+
         }
 
     }
